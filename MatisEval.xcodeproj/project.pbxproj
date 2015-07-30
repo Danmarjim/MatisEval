@@ -9,11 +9,54 @@
 /* Begin PBXBuildFile section */
 		333B60811B6A7F87003D5475 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B60801B6A7F87003D5475 /* main.m */; };
 		333B60841B6A7F87003D5475 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B60831B6A7F87003D5475 /* AppDelegate.m */; };
-		333B60871B6A7F87003D5475 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B60861B6A7F87003D5475 /* ViewController.m */; };
 		333B608A1B6A7F87003D5475 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 333B60881B6A7F87003D5475 /* Main.storyboard */; };
 		333B608C1B6A7F87003D5475 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 333B608B1B6A7F87003D5475 /* Images.xcassets */; };
 		333B608F1B6A7F87003D5475 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333B608D1B6A7F87003D5475 /* LaunchScreen.xib */; };
 		333B609B1B6A7F87003D5475 /* MatisEvalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B609A1B6A7F87003D5475 /* MatisEvalTests.m */; };
+		333B60A61B6A817C003D5475 /* Matis.xml in Resources */ = {isa = PBXBuildFile; fileRef = 333B60A51B6A817C003D5475 /* Matis.xml */; };
+		333B60F41B6A8395003D5475 /* PoiDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B60F31B6A8395003D5475 /* PoiDTO.m */; };
+		333B618F1B6A88DC003D5475 /* MTMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B618D1B6A88DC003D5475 /* MTMainController.m */; };
+		333B61901B6A88DC003D5475 /* MTMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333B618E1B6A88DC003D5475 /* MTMainController.xib */; };
+		333B63841B6A97F8003D5475 /* UIColor+MyColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63831B6A97F8003D5475 /* UIColor+MyColor.m */; };
+		333B638B1B6A9979003D5475 /* MTMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63891B6A9979003D5475 /* MTMapController.m */; };
+		333B638C1B6A9979003D5475 /* MTMapController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333B638A1B6A9979003D5475 /* MTMapController.xib */; };
+		333B63901B6A9989003D5475 /* MTListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B638E1B6A9989003D5475 /* MTListController.m */; };
+		333B63911B6A9989003D5475 /* MTListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333B638F1B6A9989003D5475 /* MTListController.xib */; };
+		333B63951B6A999A003D5475 /* MTDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63931B6A999A003D5475 /* MTDetailController.m */; };
+		333B63961B6A999A003D5475 /* MTDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333B63941B6A999A003D5475 /* MTDetailController.xib */; };
+		333B63981B6A99D1003D5475 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 333B63971B6A99D1003D5475 /* MapKit.framework */; };
+		333B63DF1B6A9AC4003D5475 /* BaseLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B639D1B6A9AC4003D5475 /* BaseLogic.m */; };
+		333B63E01B6A9AC4003D5475 /* LogicFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B639F1B6A9AC4003D5475 /* LogicFilter.m */; };
+		333B63E11B6A9AC4003D5475 /* DummyCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63A31B6A9AC4003D5475 /* DummyCache.m */; };
+		333B63E21B6A9AC4003D5475 /* LimitedAgeMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63A51B6A9AC4003D5475 /* LimitedAgeMemoryCache.m */; };
+		333B63E31B6A9AC4003D5475 /* LimitedAgeUnlimitedDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63A71B6A9AC4003D5475 /* LimitedAgeUnlimitedDiskCache.m */; };
+		333B63E41B6A9AC4003D5475 /* UnlimitedDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63A91B6A9AC4003D5475 /* UnlimitedDiskCache.m */; };
+		333B63E51B6A9AC4003D5475 /* UnlimitedMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63AB1B6A9AC4003D5475 /* UnlimitedMemoryCache.m */; };
+		333B63E61B6A9AC4003D5475 /* BaseGetDetailPOILogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63AF1B6A9AC4003D5475 /* BaseGetDetailPOILogic.m */; };
+		333B63E71B6A9AC4003D5475 /* BaseGetPOILogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63B11B6A9AC4003D5475 /* BaseGetPOILogic.m */; };
+		333B63E81B6A9AC4003D5475 /* GetDetailPOILogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63B31B6A9AC4003D5475 /* GetDetailPOILogic.m */; };
+		333B63E91B6A9AC4003D5475 /* GetPOILogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63B51B6A9AC4003D5475 /* GetPOILogic.m */; };
+		333B63EA1B6A9AC4003D5475 /* MatisEvalHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63B71B6A9AC4003D5475 /* MatisEvalHelper.m */; };
+		333B63EB1B6A9AC4003D5475 /* GetDetailPOIActionTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63BA1B6A9AC4003D5475 /* GetDetailPOIActionTask.m */; };
+		333B63EC1B6A9AC4003D5475 /* GetPOIActionTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63BC1B6A9AC4003D5475 /* GetPOIActionTask.m */; };
+		333B63ED1B6A9AC4003D5475 /* GetDetailPOIRequestDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63C01B6A9AC4003D5475 /* GetDetailPOIRequestDAO.m */; };
+		333B63EE1B6A9AC4003D5475 /* GetDetailPOIResponseDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63C21B6A9AC4003D5475 /* GetDetailPOIResponseDAO.m */; };
+		333B63EF1B6A9AC4003D5475 /* GetPOIDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63C41B6A9AC4003D5475 /* GetPOIDAO.m */; };
+		333B63F01B6A9AC4003D5475 /* GetPOIRequestDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63C61B6A9AC4003D5475 /* GetPOIRequestDAO.m */; };
+		333B63F11B6A9AC4003D5475 /* GetPOIResponseDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63C81B6A9AC4003D5475 /* GetPOIResponseDAO.m */; };
+		333B63F21B6A9AC4003D5475 /* BaseGetDetailPOIRequestDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63CC1B6A9AC4003D5475 /* BaseGetDetailPOIRequestDTO.m */; };
+		333B63F31B6A9AC4003D5475 /* BaseGetDetailPOIResponseDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63CE1B6A9AC4003D5475 /* BaseGetDetailPOIResponseDTO.m */; };
+		333B63F41B6A9AC4003D5475 /* BaseGetPOIDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63D01B6A9AC4003D5475 /* BaseGetPOIDTO.m */; };
+		333B63F51B6A9AC4003D5475 /* BaseGetPOIRequestDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63D21B6A9AC4003D5475 /* BaseGetPOIRequestDTO.m */; };
+		333B63F61B6A9AC4003D5475 /* BaseGetPOIResponseDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63D41B6A9AC4003D5475 /* BaseGetPOIResponseDTO.m */; };
+		333B63F71B6A9AC4003D5475 /* GetDetailPOIRequestDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63D61B6A9AC4003D5475 /* GetDetailPOIRequestDTO.m */; };
+		333B63F81B6A9AC4003D5475 /* GetDetailPOIResponseDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63D81B6A9AC4003D5475 /* GetDetailPOIResponseDTO.m */; };
+		333B63F91B6A9AC4003D5475 /* GetPOIDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63DA1B6A9AC4003D5475 /* GetPOIDTO.m */; };
+		333B63FA1B6A9AC4003D5475 /* GetPOIRequestDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63DC1B6A9AC4003D5475 /* GetPOIRequestDTO.m */; };
+		333B63FB1B6A9AC4003D5475 /* GetPOIResponseDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63DE1B6A9AC4003D5475 /* GetPOIResponseDTO.m */; };
+		333B64001B6A9C2B003D5475 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 333B63FE1B6A9C2B003D5475 /* CustomCell.m */; };
+		333B64011B6A9C2B003D5475 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 333B63FF1B6A9C2B003D5475 /* CustomCell.xib */; };
+		99A7B52048D015BA9BB68FFC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5160FB586796B0C599E150FC /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +75,96 @@
 		333B60801B6A7F87003D5475 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		333B60821B6A7F87003D5475 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		333B60831B6A7F87003D5475 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		333B60851B6A7F87003D5475 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		333B60861B6A7F87003D5475 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		333B60891B6A7F87003D5475 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		333B608B1B6A7F87003D5475 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		333B608E1B6A7F87003D5475 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		333B60941B6A7F87003D5475 /* MatisEvalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatisEvalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		333B60991B6A7F87003D5475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		333B609A1B6A7F87003D5475 /* MatisEvalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatisEvalTests.m; sourceTree = "<group>"; };
+		333B60A51B6A817C003D5475 /* Matis.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Matis.xml; sourceTree = "<group>"; };
+		333B60F01B6A82E8003D5475 /* GenDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenDefines.h; sourceTree = "<group>"; };
+		333B60F21B6A8395003D5475 /* PoiDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoiDTO.h; sourceTree = "<group>"; };
+		333B60F31B6A8395003D5475 /* PoiDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoiDTO.m; sourceTree = "<group>"; };
+		333B618C1B6A88DC003D5475 /* MTMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMainController.h; sourceTree = "<group>"; };
+		333B618D1B6A88DC003D5475 /* MTMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMainController.m; sourceTree = "<group>"; };
+		333B618E1B6A88DC003D5475 /* MTMainController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTMainController.xib; sourceTree = "<group>"; };
+		333B63821B6A97F8003D5475 /* UIColor+MyColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MyColor.h"; sourceTree = "<group>"; };
+		333B63831B6A97F8003D5475 /* UIColor+MyColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MyColor.m"; sourceTree = "<group>"; };
+		333B63881B6A9979003D5475 /* MTMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTMapController.h; sourceTree = "<group>"; };
+		333B63891B6A9979003D5475 /* MTMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTMapController.m; sourceTree = "<group>"; };
+		333B638A1B6A9979003D5475 /* MTMapController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTMapController.xib; sourceTree = "<group>"; };
+		333B638D1B6A9989003D5475 /* MTListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTListController.h; sourceTree = "<group>"; };
+		333B638E1B6A9989003D5475 /* MTListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTListController.m; sourceTree = "<group>"; };
+		333B638F1B6A9989003D5475 /* MTListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTListController.xib; sourceTree = "<group>"; };
+		333B63921B6A999A003D5475 /* MTDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDetailController.h; sourceTree = "<group>"; };
+		333B63931B6A999A003D5475 /* MTDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDetailController.m; sourceTree = "<group>"; };
+		333B63941B6A999A003D5475 /* MTDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MTDetailController.xib; sourceTree = "<group>"; };
+		333B63971B6A99D1003D5475 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		333B639C1B6A9AC4003D5475 /* BaseLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseLogic.h; sourceTree = "<group>"; };
+		333B639D1B6A9AC4003D5475 /* BaseLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseLogic.m; sourceTree = "<group>"; };
+		333B639E1B6A9AC4003D5475 /* LogicFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogicFilter.h; sourceTree = "<group>"; };
+		333B639F1B6A9AC4003D5475 /* LogicFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogicFilter.m; sourceTree = "<group>"; };
+		333B63A11B6A9AC4003D5475 /* Cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cache.h; sourceTree = "<group>"; };
+		333B63A21B6A9AC4003D5475 /* DummyCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyCache.h; sourceTree = "<group>"; };
+		333B63A31B6A9AC4003D5475 /* DummyCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyCache.m; sourceTree = "<group>"; };
+		333B63A41B6A9AC4003D5475 /* LimitedAgeMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitedAgeMemoryCache.h; sourceTree = "<group>"; };
+		333B63A51B6A9AC4003D5475 /* LimitedAgeMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitedAgeMemoryCache.m; sourceTree = "<group>"; };
+		333B63A61B6A9AC4003D5475 /* LimitedAgeUnlimitedDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitedAgeUnlimitedDiskCache.h; sourceTree = "<group>"; };
+		333B63A71B6A9AC4003D5475 /* LimitedAgeUnlimitedDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitedAgeUnlimitedDiskCache.m; sourceTree = "<group>"; };
+		333B63A81B6A9AC4003D5475 /* UnlimitedDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnlimitedDiskCache.h; sourceTree = "<group>"; };
+		333B63A91B6A9AC4003D5475 /* UnlimitedDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnlimitedDiskCache.m; sourceTree = "<group>"; };
+		333B63AA1B6A9AC4003D5475 /* UnlimitedMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnlimitedMemoryCache.h; sourceTree = "<group>"; };
+		333B63AB1B6A9AC4003D5475 /* UnlimitedMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnlimitedMemoryCache.m; sourceTree = "<group>"; };
+		333B63AE1B6A9AC4003D5475 /* BaseGetDetailPOILogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseGetDetailPOILogic.h; sourceTree = "<group>"; };
+		333B63AF1B6A9AC4003D5475 /* BaseGetDetailPOILogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseGetDetailPOILogic.m; sourceTree = "<group>"; };
+		333B63B01B6A9AC4003D5475 /* BaseGetPOILogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseGetPOILogic.h; sourceTree = "<group>"; };
+		333B63B11B6A9AC4003D5475 /* BaseGetPOILogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseGetPOILogic.m; sourceTree = "<group>"; };
+		333B63B21B6A9AC4003D5475 /* GetDetailPOILogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetDetailPOILogic.h; sourceTree = "<group>"; };
+		333B63B31B6A9AC4003D5475 /* GetDetailPOILogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetDetailPOILogic.m; sourceTree = "<group>"; };
+		333B63B41B6A9AC4003D5475 /* GetPOILogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetPOILogic.h; sourceTree = "<group>"; };
+		333B63B51B6A9AC4003D5475 /* GetPOILogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPOILogic.m; sourceTree = "<group>"; };
+		333B63B61B6A9AC4003D5475 /* MatisEvalHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatisEvalHelper.h; sourceTree = "<group>"; };
+		333B63B71B6A9AC4003D5475 /* MatisEvalHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatisEvalHelper.m; sourceTree = "<group>"; };
+		333B63B91B6A9AC4003D5475 /* GetDetailPOIActionTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetDetailPOIActionTask.h; sourceTree = "<group>"; };
+		333B63BA1B6A9AC4003D5475 /* GetDetailPOIActionTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetDetailPOIActionTask.m; sourceTree = "<group>"; };
+		333B63BB1B6A9AC4003D5475 /* GetPOIActionTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetPOIActionTask.h; sourceTree = "<group>"; };
+		333B63BC1B6A9AC4003D5475 /* GetPOIActionTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPOIActionTask.m; sourceTree = "<group>"; };
+		333B63BF1B6A9AC4003D5475 /* GetDetailPOIRequestDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetDetailPOIRequestDAO.h; sourceTree = "<group>"; };
+		333B63C01B6A9AC4003D5475 /* GetDetailPOIRequestDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetDetailPOIRequestDAO.m; sourceTree = "<group>"; };
+		333B63C11B6A9AC4003D5475 /* GetDetailPOIResponseDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetDetailPOIResponseDAO.h; sourceTree = "<group>"; };
+		333B63C21B6A9AC4003D5475 /* GetDetailPOIResponseDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetDetailPOIResponseDAO.m; sourceTree = "<group>"; };
+		333B63C31B6A9AC4003D5475 /* GetPOIDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetPOIDAO.h; sourceTree = "<group>"; };
+		333B63C41B6A9AC4003D5475 /* GetPOIDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPOIDAO.m; sourceTree = "<group>"; };
+		333B63C51B6A9AC4003D5475 /* GetPOIRequestDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetPOIRequestDAO.h; sourceTree = "<group>"; };
+		333B63C61B6A9AC4003D5475 /* GetPOIRequestDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPOIRequestDAO.m; sourceTree = "<group>"; };
+		333B63C71B6A9AC4003D5475 /* GetPOIResponseDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetPOIResponseDAO.h; sourceTree = "<group>"; };
+		333B63C81B6A9AC4003D5475 /* GetPOIResponseDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPOIResponseDAO.m; sourceTree = "<group>"; };
+		333B63CB1B6A9AC4003D5475 /* BaseGetDetailPOIRequestDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseGetDetailPOIRequestDTO.h; sourceTree = "<group>"; };
+		333B63CC1B6A9AC4003D5475 /* BaseGetDetailPOIRequestDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseGetDetailPOIRequestDTO.m; sourceTree = "<group>"; };
+		333B63CD1B6A9AC4003D5475 /* BaseGetDetailPOIResponseDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseGetDetailPOIResponseDTO.h; sourceTree = "<group>"; };
+		333B63CE1B6A9AC4003D5475 /* BaseGetDetailPOIResponseDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseGetDetailPOIResponseDTO.m; sourceTree = "<group>"; };
+		333B63CF1B6A9AC4003D5475 /* BaseGetPOIDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseGetPOIDTO.h; sourceTree = "<group>"; };
+		333B63D01B6A9AC4003D5475 /* BaseGetPOIDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseGetPOIDTO.m; sourceTree = "<group>"; };
+		333B63D11B6A9AC4003D5475 /* BaseGetPOIRequestDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseGetPOIRequestDTO.h; sourceTree = "<group>"; };
+		333B63D21B6A9AC4003D5475 /* BaseGetPOIRequestDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseGetPOIRequestDTO.m; sourceTree = "<group>"; };
+		333B63D31B6A9AC4003D5475 /* BaseGetPOIResponseDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseGetPOIResponseDTO.h; sourceTree = "<group>"; };
+		333B63D41B6A9AC4003D5475 /* BaseGetPOIResponseDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseGetPOIResponseDTO.m; sourceTree = "<group>"; };
+		333B63D51B6A9AC4003D5475 /* GetDetailPOIRequestDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetDetailPOIRequestDTO.h; sourceTree = "<group>"; };
+		333B63D61B6A9AC4003D5475 /* GetDetailPOIRequestDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetDetailPOIRequestDTO.m; sourceTree = "<group>"; };
+		333B63D71B6A9AC4003D5475 /* GetDetailPOIResponseDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetDetailPOIResponseDTO.h; sourceTree = "<group>"; };
+		333B63D81B6A9AC4003D5475 /* GetDetailPOIResponseDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetDetailPOIResponseDTO.m; sourceTree = "<group>"; };
+		333B63D91B6A9AC4003D5475 /* GetPOIDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetPOIDTO.h; sourceTree = "<group>"; };
+		333B63DA1B6A9AC4003D5475 /* GetPOIDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPOIDTO.m; sourceTree = "<group>"; };
+		333B63DB1B6A9AC4003D5475 /* GetPOIRequestDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetPOIRequestDTO.h; sourceTree = "<group>"; };
+		333B63DC1B6A9AC4003D5475 /* GetPOIRequestDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPOIRequestDTO.m; sourceTree = "<group>"; };
+		333B63DD1B6A9AC4003D5475 /* GetPOIResponseDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetPOIResponseDTO.h; sourceTree = "<group>"; };
+		333B63DE1B6A9AC4003D5475 /* GetPOIResponseDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPOIResponseDTO.m; sourceTree = "<group>"; };
+		333B63FD1B6A9C2B003D5475 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		333B63FE1B6A9C2B003D5475 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		333B63FF1B6A9C2B003D5475 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		5160FB586796B0C599E150FC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		968776D021C85CC6CFB2F0B9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F354ECCAB2BF5EF0BBF98F2A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +172,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				333B63981B6A99D1003D5475 /* MapKit.framework in Frameworks */,
+				99A7B52048D015BA9BB68FFC /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +187,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BAE4347C63BD9319B8C87D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				333B63971B6A99D1003D5475 /* MapKit.framework */,
+				5160FB586796B0C599E150FC /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		333B60721B6A7F87003D5475 = {
 			isa = PBXGroup;
 			children = (
 				333B607D1B6A7F87003D5475 /* MatisEval */,
 				333B60971B6A7F87003D5475 /* MatisEvalTests */,
 				333B607C1B6A7F87003D5475 /* Products */,
+				4DF714DE00F82DD69D10B090 /* Pods */,
+				1BAE4347C63BD9319B8C87D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,10 +219,11 @@
 		333B607D1B6A7F87003D5475 /* MatisEval */ = {
 			isa = PBXGroup;
 			children = (
+				333B63801B6A97E7003D5475 /* Utils */,
+				333B61851B6A88A8003D5475 /* Views */,
+				333B60A71B6A81EC003D5475 /* API */,
 				333B60821B6A7F87003D5475 /* AppDelegate.h */,
 				333B60831B6A7F87003D5475 /* AppDelegate.m */,
-				333B60851B6A7F87003D5475 /* ViewController.h */,
-				333B60861B6A7F87003D5475 /* ViewController.m */,
 				333B60881B6A7F87003D5475 /* Main.storyboard */,
 				333B608B1B6A7F87003D5475 /* Images.xcassets */,
 				333B608D1B6A7F87003D5475 /* LaunchScreen.xib */,
@@ -119,6 +258,260 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		333B60A71B6A81EC003D5475 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				333B60F01B6A82E8003D5475 /* GenDefines.h */,
+				333B60A51B6A817C003D5475 /* Matis.xml */,
+				333B63991B6A9AC4003D5475 /* Classes */,
+				333B60F11B6A8375003D5475 /* DTOs */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		333B60F11B6A8375003D5475 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				333B60F21B6A8395003D5475 /* PoiDTO.h */,
+				333B60F31B6A8395003D5475 /* PoiDTO.m */,
+			);
+			name = DTOs;
+			sourceTree = "<group>";
+		};
+		333B61851B6A88A8003D5475 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				333B63871B6A9961003D5475 /* Detail */,
+				333B63861B6A995D003D5475 /* List */,
+				333B63851B6A9957003D5475 /* Map */,
+				333B61861B6A88AC003D5475 /* Main */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		333B61861B6A88AC003D5475 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				333B618C1B6A88DC003D5475 /* MTMainController.h */,
+				333B618D1B6A88DC003D5475 /* MTMainController.m */,
+				333B618E1B6A88DC003D5475 /* MTMainController.xib */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		333B63801B6A97E7003D5475 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				333B63FC1B6A9C04003D5475 /* CustomCell */,
+				333B63811B6A97ED003D5475 /* UIColor */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		333B63811B6A97ED003D5475 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				333B63821B6A97F8003D5475 /* UIColor+MyColor.h */,
+				333B63831B6A97F8003D5475 /* UIColor+MyColor.m */,
+			);
+			name = UIColor;
+			sourceTree = "<group>";
+		};
+		333B63851B6A9957003D5475 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				333B63881B6A9979003D5475 /* MTMapController.h */,
+				333B63891B6A9979003D5475 /* MTMapController.m */,
+				333B638A1B6A9979003D5475 /* MTMapController.xib */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		333B63861B6A995D003D5475 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				333B638D1B6A9989003D5475 /* MTListController.h */,
+				333B638E1B6A9989003D5475 /* MTListController.m */,
+				333B638F1B6A9989003D5475 /* MTListController.xib */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		333B63871B6A9961003D5475 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				333B63921B6A999A003D5475 /* MTDetailController.h */,
+				333B63931B6A999A003D5475 /* MTDetailController.m */,
+				333B63941B6A999A003D5475 /* MTDetailController.xib */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		333B63991B6A9AC4003D5475 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				333B639A1B6A9AC4003D5475 /* gen */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		333B639A1B6A9AC4003D5475 /* gen */ = {
+			isa = PBXGroup;
+			children = (
+				333B639B1B6A9AC4003D5475 /* Base */,
+				333B63A01B6A9AC4003D5475 /* Cache */,
+				333B63AC1B6A9AC4003D5475 /* Logic */,
+				333B63BD1B6A9AC4003D5475 /* Model */,
+			);
+			path = gen;
+			sourceTree = "<group>";
+		};
+		333B639B1B6A9AC4003D5475 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				333B639C1B6A9AC4003D5475 /* BaseLogic.h */,
+				333B639D1B6A9AC4003D5475 /* BaseLogic.m */,
+				333B639E1B6A9AC4003D5475 /* LogicFilter.h */,
+				333B639F1B6A9AC4003D5475 /* LogicFilter.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		333B63A01B6A9AC4003D5475 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				333B63A11B6A9AC4003D5475 /* Cache.h */,
+				333B63A21B6A9AC4003D5475 /* DummyCache.h */,
+				333B63A31B6A9AC4003D5475 /* DummyCache.m */,
+				333B63A41B6A9AC4003D5475 /* LimitedAgeMemoryCache.h */,
+				333B63A51B6A9AC4003D5475 /* LimitedAgeMemoryCache.m */,
+				333B63A61B6A9AC4003D5475 /* LimitedAgeUnlimitedDiskCache.h */,
+				333B63A71B6A9AC4003D5475 /* LimitedAgeUnlimitedDiskCache.m */,
+				333B63A81B6A9AC4003D5475 /* UnlimitedDiskCache.h */,
+				333B63A91B6A9AC4003D5475 /* UnlimitedDiskCache.m */,
+				333B63AA1B6A9AC4003D5475 /* UnlimitedMemoryCache.h */,
+				333B63AB1B6A9AC4003D5475 /* UnlimitedMemoryCache.m */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		333B63AC1B6A9AC4003D5475 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				333B63AD1B6A9AC4003D5475 /* Base */,
+				333B63B21B6A9AC4003D5475 /* GetDetailPOILogic.h */,
+				333B63B31B6A9AC4003D5475 /* GetDetailPOILogic.m */,
+				333B63B41B6A9AC4003D5475 /* GetPOILogic.h */,
+				333B63B51B6A9AC4003D5475 /* GetPOILogic.m */,
+				333B63B61B6A9AC4003D5475 /* MatisEvalHelper.h */,
+				333B63B71B6A9AC4003D5475 /* MatisEvalHelper.m */,
+				333B63B81B6A9AC4003D5475 /* Tasks */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		333B63AD1B6A9AC4003D5475 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				333B63AE1B6A9AC4003D5475 /* BaseGetDetailPOILogic.h */,
+				333B63AF1B6A9AC4003D5475 /* BaseGetDetailPOILogic.m */,
+				333B63B01B6A9AC4003D5475 /* BaseGetPOILogic.h */,
+				333B63B11B6A9AC4003D5475 /* BaseGetPOILogic.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		333B63B81B6A9AC4003D5475 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				333B63B91B6A9AC4003D5475 /* GetDetailPOIActionTask.h */,
+				333B63BA1B6A9AC4003D5475 /* GetDetailPOIActionTask.m */,
+				333B63BB1B6A9AC4003D5475 /* GetPOIActionTask.h */,
+				333B63BC1B6A9AC4003D5475 /* GetPOIActionTask.m */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		333B63BD1B6A9AC4003D5475 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				333B63BE1B6A9AC4003D5475 /* DAO */,
+				333B63C91B6A9AC4003D5475 /* DTO */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		333B63BE1B6A9AC4003D5475 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				333B63BF1B6A9AC4003D5475 /* GetDetailPOIRequestDAO.h */,
+				333B63C01B6A9AC4003D5475 /* GetDetailPOIRequestDAO.m */,
+				333B63C11B6A9AC4003D5475 /* GetDetailPOIResponseDAO.h */,
+				333B63C21B6A9AC4003D5475 /* GetDetailPOIResponseDAO.m */,
+				333B63C31B6A9AC4003D5475 /* GetPOIDAO.h */,
+				333B63C41B6A9AC4003D5475 /* GetPOIDAO.m */,
+				333B63C51B6A9AC4003D5475 /* GetPOIRequestDAO.h */,
+				333B63C61B6A9AC4003D5475 /* GetPOIRequestDAO.m */,
+				333B63C71B6A9AC4003D5475 /* GetPOIResponseDAO.h */,
+				333B63C81B6A9AC4003D5475 /* GetPOIResponseDAO.m */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		333B63C91B6A9AC4003D5475 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				333B63CA1B6A9AC4003D5475 /* Base */,
+				333B63D51B6A9AC4003D5475 /* GetDetailPOIRequestDTO.h */,
+				333B63D61B6A9AC4003D5475 /* GetDetailPOIRequestDTO.m */,
+				333B63D71B6A9AC4003D5475 /* GetDetailPOIResponseDTO.h */,
+				333B63D81B6A9AC4003D5475 /* GetDetailPOIResponseDTO.m */,
+				333B63D91B6A9AC4003D5475 /* GetPOIDTO.h */,
+				333B63DA1B6A9AC4003D5475 /* GetPOIDTO.m */,
+				333B63DB1B6A9AC4003D5475 /* GetPOIRequestDTO.h */,
+				333B63DC1B6A9AC4003D5475 /* GetPOIRequestDTO.m */,
+				333B63DD1B6A9AC4003D5475 /* GetPOIResponseDTO.h */,
+				333B63DE1B6A9AC4003D5475 /* GetPOIResponseDTO.m */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		333B63CA1B6A9AC4003D5475 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				333B63CB1B6A9AC4003D5475 /* BaseGetDetailPOIRequestDTO.h */,
+				333B63CC1B6A9AC4003D5475 /* BaseGetDetailPOIRequestDTO.m */,
+				333B63CD1B6A9AC4003D5475 /* BaseGetDetailPOIResponseDTO.h */,
+				333B63CE1B6A9AC4003D5475 /* BaseGetDetailPOIResponseDTO.m */,
+				333B63CF1B6A9AC4003D5475 /* BaseGetPOIDTO.h */,
+				333B63D01B6A9AC4003D5475 /* BaseGetPOIDTO.m */,
+				333B63D11B6A9AC4003D5475 /* BaseGetPOIRequestDTO.h */,
+				333B63D21B6A9AC4003D5475 /* BaseGetPOIRequestDTO.m */,
+				333B63D31B6A9AC4003D5475 /* BaseGetPOIResponseDTO.h */,
+				333B63D41B6A9AC4003D5475 /* BaseGetPOIResponseDTO.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		333B63FC1B6A9C04003D5475 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				333B63FD1B6A9C2B003D5475 /* CustomCell.h */,
+				333B63FE1B6A9C2B003D5475 /* CustomCell.m */,
+				333B63FF1B6A9C2B003D5475 /* CustomCell.xib */,
+			);
+			name = CustomCell;
+			sourceTree = "<group>";
+		};
+		4DF714DE00F82DD69D10B090 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				968776D021C85CC6CFB2F0B9 /* Pods.debug.xcconfig */,
+				F354ECCAB2BF5EF0BBF98F2A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +519,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 333B609E1B6A7F87003D5475 /* Build configuration list for PBXNativeTarget "MatisEval" */;
 			buildPhases = (
+				F283F59E0AA0E22426B53FC9 /* Check Pods Manifest.lock */,
 				333B60771B6A7F87003D5475 /* Sources */,
 				333B60781B6A7F87003D5475 /* Frameworks */,
 				333B60791B6A7F87003D5475 /* Resources */,
+				F1007584E007352DAB8E17B6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +563,11 @@
 				TargetAttributes = {
 					333B607A1B6A7F87003D5475 = {
 						CreatedOnToolsVersion = 6.4;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					333B60931B6A7F87003D5475 = {
 						CreatedOnToolsVersion = 6.4;
@@ -201,7 +601,13 @@
 			files = (
 				333B608A1B6A7F87003D5475 /* Main.storyboard in Resources */,
 				333B608F1B6A7F87003D5475 /* LaunchScreen.xib in Resources */,
+				333B60A61B6A817C003D5475 /* Matis.xml in Resources */,
+				333B63911B6A9989003D5475 /* MTListController.xib in Resources */,
+				333B638C1B6A9979003D5475 /* MTMapController.xib in Resources */,
+				333B61901B6A88DC003D5475 /* MTMainController.xib in Resources */,
+				333B64011B6A9C2B003D5475 /* CustomCell.xib in Resources */,
 				333B608C1B6A7F87003D5475 /* Images.xcassets in Resources */,
+				333B63961B6A999A003D5475 /* MTDetailController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,14 +620,82 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F1007584E007352DAB8E17B6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F283F59E0AA0E22426B53FC9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		333B60771B6A7F87003D5475 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				333B60871B6A7F87003D5475 /* ViewController.m in Sources */,
+				333B63F11B6A9AC4003D5475 /* GetPOIResponseDAO.m in Sources */,
+				333B63EB1B6A9AC4003D5475 /* GetDetailPOIActionTask.m in Sources */,
+				333B63F91B6A9AC4003D5475 /* GetPOIDTO.m in Sources */,
 				333B60841B6A7F87003D5475 /* AppDelegate.m in Sources */,
+				333B60F41B6A8395003D5475 /* PoiDTO.m in Sources */,
+				333B618F1B6A88DC003D5475 /* MTMainController.m in Sources */,
+				333B63F31B6A9AC4003D5475 /* BaseGetDetailPOIResponseDTO.m in Sources */,
+				333B63EC1B6A9AC4003D5475 /* GetPOIActionTask.m in Sources */,
+				333B638B1B6A9979003D5475 /* MTMapController.m in Sources */,
+				333B63FA1B6A9AC4003D5475 /* GetPOIRequestDTO.m in Sources */,
+				333B63F51B6A9AC4003D5475 /* BaseGetPOIRequestDTO.m in Sources */,
+				333B63841B6A97F8003D5475 /* UIColor+MyColor.m in Sources */,
+				333B63901B6A9989003D5475 /* MTListController.m in Sources */,
+				333B63F61B6A9AC4003D5475 /* BaseGetPOIResponseDTO.m in Sources */,
+				333B63FB1B6A9AC4003D5475 /* GetPOIResponseDTO.m in Sources */,
+				333B63E61B6A9AC4003D5475 /* BaseGetDetailPOILogic.m in Sources */,
+				333B63DF1B6A9AC4003D5475 /* BaseLogic.m in Sources */,
 				333B60811B6A7F87003D5475 /* main.m in Sources */,
+				333B63E21B6A9AC4003D5475 /* LimitedAgeMemoryCache.m in Sources */,
+				333B63EA1B6A9AC4003D5475 /* MatisEvalHelper.m in Sources */,
+				333B63F81B6A9AC4003D5475 /* GetDetailPOIResponseDTO.m in Sources */,
+				333B63E91B6A9AC4003D5475 /* GetPOILogic.m in Sources */,
+				333B63E11B6A9AC4003D5475 /* DummyCache.m in Sources */,
+				333B63E51B6A9AC4003D5475 /* UnlimitedMemoryCache.m in Sources */,
+				333B63ED1B6A9AC4003D5475 /* GetDetailPOIRequestDAO.m in Sources */,
+				333B63E31B6A9AC4003D5475 /* LimitedAgeUnlimitedDiskCache.m in Sources */,
+				333B63EE1B6A9AC4003D5475 /* GetDetailPOIResponseDAO.m in Sources */,
+				333B63E41B6A9AC4003D5475 /* UnlimitedDiskCache.m in Sources */,
+				333B63F21B6A9AC4003D5475 /* BaseGetDetailPOIRequestDTO.m in Sources */,
+				333B63E01B6A9AC4003D5475 /* LogicFilter.m in Sources */,
+				333B63F41B6A9AC4003D5475 /* BaseGetPOIDTO.m in Sources */,
+				333B63E71B6A9AC4003D5475 /* BaseGetPOILogic.m in Sources */,
+				333B63951B6A999A003D5475 /* MTDetailController.m in Sources */,
+				333B63E81B6A9AC4003D5475 /* GetDetailPOILogic.m in Sources */,
+				333B64001B6A9C2B003D5475 /* CustomCell.m in Sources */,
+				333B63F01B6A9AC4003D5475 /* GetPOIRequestDAO.m in Sources */,
+				333B63F71B6A9AC4003D5475 /* GetDetailPOIRequestDTO.m in Sources */,
+				333B63EF1B6A9AC4003D5475 /* GetPOIDAO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +819,7 @@
 		};
 		333B609F1B6A7F87003D5475 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 968776D021C85CC6CFB2F0B9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MatisEval/Info.plist;
@@ -355,6 +830,7 @@
 		};
 		333B60A01B6A7F87003D5475 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F354ECCAB2BF5EF0BBF98F2A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MatisEval/Info.plist;
@@ -416,6 +892,7 @@
 				333B60A01B6A7F87003D5475 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		333B60A11B6A7F87003D5475 /* Build configuration list for PBXNativeTarget "MatisEvalTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +901,7 @@
 				333B60A31B6A7F87003D5475 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protocol>
+    <messages>
+        <message name="getPOI" service="GetPOI" method="getPOIAction" description="Points Of Interest" type="GetJSON">
+            <urlPattern>
+                <url address="http://t21services.herokuapp.com/points"/>
+            </urlPattern>
+            <request type="GetPOIRequestDTO"/>
+            <response type="GetPOIResponseDTO" typeRef="true"/>
+        </message>
+        <message name="getDetailPOI" service="GetDetailPOI" method="getDetailPOIAction" description="Details from Point Of Interest" type="GetJSON">
+            <urlPattern>
+                <url address="http://t21services.herokuapp.com/points/1"/>
+            </urlPattern>
+            <request type="GetDetailPOIRequestDTO">
+                <field name="idPOI" serviceName="id" type="long" description="DTO of data"/>
+            </request>
+            <response type="GetDetailPOIResponseDTO" typeRef="true"/>
+        </message>
+    </messages>
+    <types>
+        <type name="GetPOIResponseDTO">
+            <field name="list" serviceName="list" type="GetPOIDTO*" description="Campo de POI"/>
+        </type>
+        <type name="GetPOIDTO">
+            <field name="idPOI" serviceName="id" type="string" description="Campo de POI"/>
+            <field name="title" serviceName="title" type="string" description="Campo de POI"/>
+            <field name="geocoordinates" serviceName="geocoordinates" type="string" description="Campo de POI"/>
+        </type>
+        <type name="GetDetailPOIResponseDTO">
+            <field name="idPOI" serviceName="id" type="string" description="Campo de POI"/>
+            <field name="title" serviceName="title" type="string" description="Campo de POI"/>
+            <field name="address" serviceName="address" type="string" description="Campo de POI"/>
+            <field name="transport" serviceName="transport" type="string" description="Campo de POI"/>
+            <field name="email" serviceName="email" type="string" description="Campo de POI"/>
+            <field name="geocoordinates" serviceName="geocoordinates" type="string" description="Campo de POI"/>
+            <field name="desc" serviceName="description" type="string" description="Campo de POI"/>
+            <field name="phone" serviceName="phone" type="string" description="Campo de POI"/>
+        </type>
+    </types>
+</protocol>

@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CustomCell.h
 //  MatisEval
 //
 //  Created by Daniel Martin Jimenez on 30/7/15.
@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface CustomCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIView *customView;
+@property (weak, nonatomic) IBOutlet UILabel *labelTitle;
 
 @end
-

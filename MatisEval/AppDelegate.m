@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "UIColor+MyColor.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //CONFIGURAR EL COLOR DE LA NAVBAR
+    [[UINavigationBar appearance] setBarTintColor:[UIColor customColor]];
+    [[UINavigationBar appearance] setTranslucent:NO];
+    
+    //CONFIGURAR EL TEXTO DE LA NAVBAR
+    NSDictionary *textTitleOptions = [NSDictionary dictionaryWithObjectsAndKeys:
+                                      [UIColor whiteColor], NSForegroundColorAttributeName,
+                                      [UIColor blackColor], NSForegroundColorAttributeName, nil];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes: textTitleOptions];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    //QUITA EL VALOR BACK Y EL TITULO DE LA NAVBAR
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];
+    
+    //VALORES DE LA STATUSBAR EN BLANCO
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     return YES;
 }
 
