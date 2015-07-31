@@ -7,14 +7,12 @@
 //
 
 #import "MTMainController.h"
-#import "UIColor+MyColor.h"
 
+#import "UIColor+MyColor.h"
 #import "GetPOIActionTask.h"
 #import "GetPOIRequestDTO.h"
-
 #import "GetDetailPOIActionTask.h"
 #import "GetDetailPOIRequestDTO.h"
-
 #import "PoiDTO.h"
 
 @interface MTMainController ()
@@ -30,28 +28,6 @@
     
     self.title = @"Bienvenido";    
     [self createView];
-    
-//    self.arrayPOI = [[NSMutableArray alloc] init];
-//    
-//    // Do any additional setup after loading the view from its nib.
-//    [GetPOIActionTask getPOIActionTaskForRequest:nil showLoadingView:NO completed:^(NSInteger statusCode, GetPOIResponseDTO *response) {
-//        NSLog(@"LA salida es: %@", response.list);
-//        for(PoiDTO *item in response.list){
-//            [self.arrayPOI addObject:item];
-//        }
-//    } error:^(NSError *error) {
-//        NSLog(@"Error: %@", error);
-//    }];
-//
-//    GetDetailPOIRequestDTO *request = [GetDetailPOIRequestDTO new];
-//    request.idPOI = [NSNumber numberWithInt:1];
-//    
-//    [GetDetailPOIActionTask getDetailPOIActionTaskForRequest:request showLoadingView:NO completed:^(NSInteger statusCode, GetDetailPOIResponseDTO *response) {
-//        NSLog(@"LA salida es: %@", response);
-//        PoiDTO *poi = response;
-//    } error:^(NSError *error) {
-//        NSLog(@"Error: %@", error);
-//    }];
 }
 
 - (IBAction)openMap

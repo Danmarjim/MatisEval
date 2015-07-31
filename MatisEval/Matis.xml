@@ -10,7 +10,7 @@
         </message>
         <message name="getDetailPOI" service="GetDetailPOI" method="getDetailPOIAction" description="Details from Point Of Interest" type="GetJSON">
             <urlPattern>
-                <url address="http://t21services.herokuapp.com/points/1"/>
+                <url address="http://t21services.herokuapp.com/points/${id}"/>
             </urlPattern>
             <request type="GetDetailPOIRequestDTO">
                 <field name="idPOI" serviceName="id" type="long" description="DTO of data"/>

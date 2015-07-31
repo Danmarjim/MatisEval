@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B875FFC8-7AF5-4CD3-BC12-602442E4F7CE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MatisEval</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5ED81A5F64A2E0E0AA518E801789BF5310AD170B</key>
+		<string>https://github.com/Danmarjim/MatisEval.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MatisEval.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5ED81A5F64A2E0E0AA518E801789BF5310AD170B</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Danmarjim/MatisEval.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5ED81A5F64A2E0E0AA518E801789BF5310AD170B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5ED81A5F64A2E0E0AA518E801789BF5310AD170B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MatisEval</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -107,24 +107,22 @@
 
 - (void)getDetailPOIAction:(GetDetailPOIRequestDTO *)getDetailPOIRequestDTO cache:(id<Cache>)cache refreshCache:(BOOL)refreshCache onSuccess:(void(^)(NSInteger responseCode, GetDetailPOIResponseDTO *response, ServiceGeneratorCacheType cacheType))onSuccess onProgress:(void(^) (NSUInteger __unused bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite)) onProgress onError:(void(^)(NSError *error))onError {
     
-	NSString *url=@"http://t21services.herokuapp.com/points/1";
+	NSString *url=@"http://t21services.herokuapp.com/points/${id}";
 
 	url = [self preInjectURLParameters:url  withObject:getDetailPOIRequestDTO onService:@"GetDetailPOI" onMethod:@"getDetailPOIAction"];
 
 		NSString *stringIdPOI=[NSString stringWithFormat:@"%@",getDetailPOIRequestDTO.idPOI];
 
-
    	if(getDetailPOIRequestDTO.idPOI==nil){
-        url = [url stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"${%@}",@"idPOI"] withString:@""];
+        url = [url stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"${%@}",@"id"] withString:@""];
 	} else {
 
-		if([url rangeOfString:[NSString stringWithFormat:@"${%@}",@"idPOI"]].location != NSNotFound) {
+		if([url rangeOfString:[NSString stringWithFormat:@"${%@}",@"id"]].location != NSNotFound) {
 
-		    url = [url stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"${%@}",@"idPOI"] withString:stringIdPOI];
+		    url = [url stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"${%@}",@"id"] withString:stringIdPOI];
 
 		}
 	}
-
 	url = [self postInjectURLParameters:url  withObject:getDetailPOIRequestDTO onService:@"GetDetailPOI" onMethod:@"getDetailPOIAction"];
 
 	_ModelGenLog(@"URL: %@", url);

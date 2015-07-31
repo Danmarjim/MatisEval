@@ -7,14 +7,17 @@
 //
 
 #import "MTListController.h"
+
 #import "CustomCell.h"
 #import "GetPOIActionTask.h"
 #import "GetPOIRequestDTO.h"
 #import "PoiDTO.h"
+#import "MTDetailController.h"
 
 @interface MTListController ()
 
 @property (strong, nonatomic) NSMutableArray *arrayPOIs;
+@property (strong, nonatomic) PoiDTO *poi;
 
 @end
 
@@ -25,8 +28,6 @@
     // Do any additional setup after loading the view from its nib.
     self.title = @"Listado de POIs";
     
-    [self loadPOIs];
-    
     //TableView
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -34,11 +35,16 @@
     self.tableView.separatorStyle = NO;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.arrayPOIs = [[NSMutableArray alloc] init];
+    [self loadPOIs];
+}
+
 - (void)loadPOIs
 {
-    self.arrayPOIs = [[NSMutableArray alloc] init];
-    
-    [GetPOIActionTask getPOIActionTaskForRequest:nil showLoadingView:NO completed:^(NSInteger statusCode, GetPOIResponseDTO *response) {
+    [GetPOIActionTask getPOIActionTaskForRequest:nil showLoadingView:YES completed:^(NSInteger statusCode, GetPOIResponseDTO *response) {
         NSLog(@"La salida es: %@", response.list);
         for(PoiDTO *item in response.list){
             [self.arrayPOIs addObject:item];
@@ -46,8 +52,7 @@
         [self.tableView reloadData];
     } error:^(NSError *error) {
         NSLog(@"Error: %@", error);
-    }];
-    
+    }];    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,16 +89,26 @@
     return cell;
 }
 
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    self.restaurant = [self.arrayRestaurants objectAtIndex:indexPath.row];
-//    [self performSegueWithIdentifier:@"openDetail" sender:self];
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.poi = [self.arrayPOIs objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"openDetail" sender:self];
+}
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //return [indexPath row];
     return indexPath.row == self.arrayPOIs.count - 1 ? 100 : 100;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier] isEqualToString:@"openDetail"])
+    {
+        MTDetailController *destinationController = [segue destinationViewController];
+        destinationController.idPOI = self.poi.idPOI;
+    }
+    
 }
 
 @end
