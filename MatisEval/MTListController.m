@@ -29,15 +29,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"Listado de POIs";
+    //Custom placeholder para la searchBar
     self.searchBar.placeholder = @"Buscar POI";
     
-    //TableView
+    //TableView, declaramos
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.backgroundColor = [UIColor whiteColor];
     self.tableView.separatorStyle = NO;
 }
 
+//Utilizamos este en lugar del viewDidLoad para llamarlos cada vez que entremos en la vista. Cuando se haga el backSegue a la Navbar de la vista destino a ésta tambien se llamara (util por ejemplo por si se da el caso de que se ha añadido algun nuevo POI mientras estemos en la vista destino)
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -45,6 +47,7 @@
     [self loadPOIs];
 }
 
+//Carga de POI´s y una vez se haya devuelto los resultado se recarga la tableView con ellos
 - (void)loadPOIs
 {
     [GetPOIActionTask getPOIActionTaskForRequest:nil showLoadingView:YES completed:^(NSInteger statusCode, GetPOIResponseDTO *response) {

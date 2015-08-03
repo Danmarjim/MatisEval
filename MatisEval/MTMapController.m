@@ -27,6 +27,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"Mapa de POIs";
+    //Metodo donde se hace la llamada al servicio y se recogen los POIs
     [self loadPOIs];
 }
 
@@ -44,6 +45,7 @@
     }];
 }
 
+//Declaro e inicio el Map
 - (void)setMapView
 {
     self.mapView.delegate = self;
@@ -52,6 +54,7 @@
     [self.mapView setZoomEnabled:YES];
     [self.mapView setScrollEnabled:YES];
     
+    //Añado las custom annotation al mapa
     for(int i = 0; i < self.arrayPOIs.count; i++)
     {
         PoiDTO *poi = [self.arrayPOIs objectAtIndex:i];
@@ -63,6 +66,7 @@
         [self.mapView addAnnotation:annotation];
     }
     
+    //Pido permiso para acceder a la ubicación del usuario (iOS 8)
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     self.locationManager.distanceFilter = 500;
@@ -71,30 +75,25 @@
     [self.locationManager startUpdatingLocation];
 }
 
+//Metodo para declarar las distintas anotationes en el mapa con una pequeña View
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
-    // If it's the user location, just return nil.
     if ([annotation isKindOfClass:[MKUserLocation class]])
         return nil;
     
-    // Handle any custom annotations.
     if ([annotation isKindOfClass:[CustomAnnotation class]])
     {
-        // Try to dequeue an existing pin view first.
         MKAnnotationView *pinView = (MKAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"CustomAnnotation"];
         if (!pinView)
         {
-            // If an existing pin view was not available, create one.
             pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"CustomAnnotation"];
             pinView.canShowCallout = YES;
             pinView.image = [UIImage imageNamed:@"annotation"];
             pinView.calloutOffset = CGPointMake(0, 32);
             
-            // Add a detail disclosure button to the callout.
             UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
             pinView.rightCalloutAccessoryView = rightButton;
         
-            // Add an image to the left callout.
             UIImageView *iconView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"annotation"]];
             pinView.leftCalloutAccessoryView = iconView;
         } else {
@@ -105,6 +104,7 @@
     return nil;
 }
 
+//Metodo para manejar el comportamiento una vez pinchemos en alguna annotation del mapa
 -(void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
     NSString *title = ((CustomAnnotation*)view.annotation).title;
     
@@ -130,6 +130,7 @@
     NSLog(@"didFailWithError: %@", error);
 }
 
+//Metodo donde se va recogiendo la posicion del usuario, centro la vista del mapa en la ubicacion del usuario
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
     NSLog(@"didUpdateToLocation: %@", newLocation);
@@ -147,6 +148,7 @@
     [self.mapView setRegion:region animated:NO];
 }
 
+//Aqui pasamos datos la vista de destino
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([[segue identifier] isEqualToString:@"openDetail"])

@@ -26,22 +26,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Bienvenido";    
+    //Titulo al NavBar
+    self.title = @"Bienvenido";
+    //Metodo donde inicializo la vista
     [self createView];
 }
 
 - (IBAction)openMap
 {
+    //Segue
     [self performSegueWithIdentifier:@"openMap" sender:nil];
 }
 
 - (IBAction)openList
 {
+    //Segue
     [self performSegueWithIdentifier:@"openList" sender:nil];
 }
 
 - (void)createView
 {
+    //Declaro y customizo el buttonMap
     self.buttonMap.layer.borderWidth = 3.f;
     self.buttonMap.layer.cornerRadius = 25;
     self.buttonMap.clipsToBounds = YES;
@@ -49,6 +54,7 @@
     self.buttonMap.layer.borderColor = [[UIColor customColor]CGColor];
     [self.buttonMap setTitle:@"ACCEDER AL MAPA" forState:UIControlStateNormal];
     
+    //Declaro y customizo el buttonMap
     self.buttonList.layer.borderWidth = 3.f;
     self.buttonList.layer.cornerRadius = 25;
     self.buttonList.clipsToBounds = YES;
@@ -56,6 +62,7 @@
     self.buttonList.layer.borderColor = [[UIColor customColor]CGColor];
     [self.buttonList setTitle:@"ACCEDER A LA LISTA" forState:UIControlStateNormal];
     
+    //Imagen al imageView
     UIImage *image = [UIImage imageNamed: @"logoMatis"];
     [self.imageLogo setImage:image];
 }
