@@ -63,32 +63,61 @@
     
     [self.infoDesc setScrollEnabled:NO];
     
-    //Lineas justo debajo de los textfield
-    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(20, 53, 335, 2)];
-    lineView.backgroundColor = [UIColor customColor];
-    [self.scrollView addSubview:lineView];
-    
-    UIView *lineView2 = [[UIView alloc] initWithFrame:CGRectMake(20, 154, 335, 2)];
-    lineView2.backgroundColor = [UIColor customColor];
-    [self.scrollView addSubview:lineView2];
-    
-    UIView *lineView3 = [[UIView alloc] initWithFrame:CGRectMake(20, 259, 335, 2)];
-    lineView3.backgroundColor = [UIColor customColor];
-    [self.scrollView addSubview:lineView3];
-    
-    UIView *lineView4 = [[UIView alloc] initWithFrame:CGRectMake(20, 359, 335, 2)];
-    lineView4.backgroundColor = [UIColor customColor];
-    [self.scrollView addSubview:lineView4];
-    
-    UIView *lineView5 = [[UIView alloc] initWithFrame:CGRectMake(20, 435, 335, 2)];
-    lineView5.backgroundColor = [UIColor customColor];
-    [self.scrollView addSubview:lineView5];
-    
-    UIView *lineView6 = [[UIView alloc] initWithFrame:CGRectMake(20, 511, 335, 2)];
-    lineView6.backgroundColor = [UIColor customColor];
-    [self.scrollView addSubview:lineView6];
-    
-    self.scrollView.contentSize = CGSizeMake(375, 900);
+    //Lineas justo debajo de los textfield depiendo del dispositivo
+    CGSize iOSDeviceScreenSize = [[UIScreen mainScreen] bounds].size;
+    if(iOSDeviceScreenSize.width == 320){
+        UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(20, 53, 280, 2)];
+        lineView.backgroundColor = [UIColor customColor];
+        [self.scrollView addSubview:lineView];
+        
+        UIView *lineView2 = [[UIView alloc] initWithFrame:CGRectMake(20, 154, 280, 2)];
+        lineView2.backgroundColor = [UIColor customColor];
+        [self.scrollView addSubview:lineView2];
+        
+        UIView *lineView3 = [[UIView alloc] initWithFrame:CGRectMake(20, 259, 280, 2)];
+        lineView3.backgroundColor = [UIColor customColor];
+        [self.scrollView addSubview:lineView3];
+        
+        UIView *lineView4 = [[UIView alloc] initWithFrame:CGRectMake(20, 359, 280, 2)];
+        lineView4.backgroundColor = [UIColor customColor];
+        [self.scrollView addSubview:lineView4];
+        
+        UIView *lineView5 = [[UIView alloc] initWithFrame:CGRectMake(20, 435, 280, 2)];
+        lineView5.backgroundColor = [UIColor customColor];
+        [self.scrollView addSubview:lineView5];
+        
+        UIView *lineView6 = [[UIView alloc] initWithFrame:CGRectMake(20, 511, 280, 2)];
+        lineView6.backgroundColor = [UIColor customColor];
+        [self.scrollView addSubview:lineView6];
+        
+        self.scrollView.contentSize = CGSizeMake(320, 1100);
+    } else {
+        UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(20, 53, 335, 2)];
+        lineView.backgroundColor = [UIColor customColor];
+        [self.scrollView addSubview:lineView];
+        
+        UIView *lineView2 = [[UIView alloc] initWithFrame:CGRectMake(20, 154, 335, 2)];
+        lineView2.backgroundColor = [UIColor customColor];
+        [self.scrollView addSubview:lineView2];
+        
+        UIView *lineView3 = [[UIView alloc] initWithFrame:CGRectMake(20, 259, 335, 2)];
+        lineView3.backgroundColor = [UIColor customColor];
+        [self.scrollView addSubview:lineView3];
+        
+        UIView *lineView4 = [[UIView alloc] initWithFrame:CGRectMake(20, 359, 335, 2)];
+        lineView4.backgroundColor = [UIColor customColor];
+        [self.scrollView addSubview:lineView4];
+        
+        UIView *lineView5 = [[UIView alloc] initWithFrame:CGRectMake(20, 435, 335, 2)];
+        lineView5.backgroundColor = [UIColor customColor];
+        [self.scrollView addSubview:lineView5];
+        
+        UIView *lineView6 = [[UIView alloc] initWithFrame:CGRectMake(20, 511, 335, 2)];
+        lineView6.backgroundColor = [UIColor customColor];
+        [self.scrollView addSubview:lineView6];
+        
+        self.scrollView.contentSize = CGSizeMake(375, 900);
+    }
 }
 
 - (void)didReceiveMemoryWarning {

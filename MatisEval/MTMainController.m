@@ -43,14 +43,14 @@
 - (void)createView
 {
     self.buttonMap.layer.borderWidth = 3.f;
-    self.buttonMap.layer.cornerRadius = 40;
+    self.buttonMap.layer.cornerRadius = 25;
     self.buttonMap.clipsToBounds = YES;
     [self.buttonMap setTintColor:[UIColor customColor]];
     self.buttonMap.layer.borderColor = [[UIColor customColor]CGColor];
     [self.buttonMap setTitle:@"ACCEDER AL MAPA" forState:UIControlStateNormal];
     
     self.buttonList.layer.borderWidth = 3.f;
-    self.buttonList.layer.cornerRadius = 40;
+    self.buttonList.layer.cornerRadius = 25;
     self.buttonList.clipsToBounds = YES;
     [self.buttonList setTintColor:[UIColor customColor]];
     self.buttonList.layer.borderColor = [[UIColor customColor]CGColor];

@@ -25,7 +25,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *infoTrans;
 @property (strong, nonatomic) IBOutlet UILabel *infoEmail;
 @property (strong, nonatomic) IBOutlet UILabel *infoPhone;
-//@property (strong, nonatomic) IBOutlet UILabel *infoDesc;
 @property (strong, nonatomic) IBOutlet UITextView *infoDesc;
 
 @end
