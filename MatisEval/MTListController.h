@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MTListController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface MTListController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end

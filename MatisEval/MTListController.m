@@ -17,6 +17,8 @@
 @interface MTListController ()
 
 @property (strong, nonatomic) NSMutableArray *arrayPOIs;
+@property (strong, nonatomic) NSMutableArray *arrayfilterPOIs;
+@property BOOL isFiltered;
 @property (strong, nonatomic) PoiDTO *poi;
 
 @end
@@ -27,6 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"Listado de POIs";
+    self.searchBar.placeholder = @"Buscar POI";
     
     //TableView
     self.tableView.delegate = self;
@@ -69,7 +72,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return self.arrayPOIs.count;
+    //return self.arrayPOIs.count;
+    if(self.isFiltered == YES){
+        return self.arrayfilterPOIs.count;
+    } else {
+        return self.arrayPOIs.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -81,17 +89,30 @@
         cell = [tableView dequeueReusableCellWithIdentifier:@"CustomCell"];
     }
     
-    PoiDTO *poi = [self.arrayPOIs objectAtIndex:indexPath.row];
-    
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    cell.labelTitle.text = poi.title;
+//    PoiDTO *poi = [self.arrayPOIs objectAtIndex:indexPath.row];
+//    cell.labelTitle.text = poi.title;
+    
+    if(self.isFiltered == YES){
+        PoiDTO *poi = [self.arrayfilterPOIs objectAtIndex:indexPath.row];
+        cell.labelTitle.text = poi.title;
+    } else {
+        PoiDTO *poi = [self.arrayPOIs objectAtIndex:indexPath.row];
+        cell.labelTitle.text = poi.title;
+    }
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.poi = [self.arrayPOIs objectAtIndex:indexPath.row];
+    //self.poi = [self.arrayPOIs objectAtIndex:indexPath.row];
+    if(self.isFiltered == YES){
+        self.poi = [self.arrayfilterPOIs objectAtIndex:indexPath.row];
+    } else {
+        self.poi = [self.arrayPOIs objectAtIndex:indexPath.row];
+    }
+    [self.searchBar resignFirstResponder];
     [self performSegueWithIdentifier:@"openDetail" sender:self];
 }
 
@@ -101,6 +122,31 @@
     return indexPath.row == self.arrayPOIs.count - 1 ? 100 : 100;
 }
 
+#pragma mark - SearchBar data source
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    if(searchText.length == 0){
+        self.isFiltered = NO;
+    } else {
+        self.isFiltered = YES;
+        self.arrayfilterPOIs = [[NSMutableArray alloc] init];
+        
+        for(PoiDTO *item in self.arrayPOIs){
+            NSRange poiNameRange = [item.title rangeOfString:searchText options:NSCaseInsensitiveSearch];
+            if(poiNameRange.location != NSNotFound){
+                [self.arrayfilterPOIs addObject:item];
+            }
+        }
+    }
+    [self.tableView reloadData];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [self.searchBar resignFirstResponder];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if([[segue identifier] isEqualToString:@"openDetail"])
@@ -108,7 +154,6 @@
         MTDetailController *destinationController = [segue destinationViewController];
         destinationController.idPOI = self.poi.idPOI;
     }
-    
 }
 
 @end
